@@ -1,0 +1,50 @@
+// Placeholder sounds with matching subtitles.
+Test_Subtitles
+{
+	playrandom
+	{
+		volume  .2
+		time 	3,10
+		pitch 	95,105
+		rndwave
+		{
+			wave vo\trainyard\cit_train_endline.wav
+			wave vo\trainyard\cit_raid_reason.wav
+			wave vo\trainyard\female01\cit_pedestrian01.wav
+		}
+	
+		// NOTE: the subtitles are picked at the same random roll as the lines.
+		// Thus, first sub matches the first wave, second matches the second, etc.
+		// The subtitles block should match the rndwave block.
+		// If the subtitle key is "none" then it'll be parsed without trying to emit.
+		// The numerical value is the duration of the subtitle on screen.
+		// If not included, the duration will be 1.0 second.
+		subtitles 
+		{
+			subtitle "opening.cit_train_endline 2.5"
+			subtitle "opening.cit_raid_reason"
+			subtitle "none"
+		}
+	}
+		
+	playrandom
+	{
+		volume  .2
+		time 	3,10
+		pitch 	95,105
+		rndwave
+		{
+			wave vo\trainyard\male01\cit_window_use02.wav
+			wave vo\trainyard\cit_train_geton.wav
+			wave vo\trainyard\cit_raid_use01.wav
+		}
+	
+		// NOTE: each 'playrandom' can have its own subtitle block.
+		subtitles 
+		{
+			subtitle "opening.cit_window_use02 2.5"
+			subtitle "opening.cit_train_geton 3.5"
+			subtitle "opening.cit_raid_use01 1.0"
+		}
+	}
+}
