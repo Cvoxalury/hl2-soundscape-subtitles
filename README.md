@@ -10,5 +10,5 @@ Included are:
 * Valve Software: original c_soundscape.cpp.
 * Cvoxalury: the code edits.
 
-This repository is intended to be used under GNU GPLv3 license. 
+This repository is intended to be used under MIT license. Basically: do whatever. 
 
